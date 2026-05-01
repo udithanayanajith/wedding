@@ -1,0 +1,20 @@
+{
+    "devDependencies": {
+        "@eslint/js": "^9.37.0",
+        "eslint": "^9.37.0",
+        "globals": "^16.4.0",
+        "htmlhint": "^1.7.1",
+        "stylelint": "^16.25.0",
+        "stylelint-config-recommended": "^17.0.0"
+    },
+    "scripts": {
+        "lint:js": "eslint js",
+        "lint:css": "stylelint css",
+        "lint:html": "htmlhint **/*.html",
+        "dev": "npx esbuild js/guest.js --bundle --outdir=dist --servedir=. --serve=8080",
+        "build": "npx esbuild js/guest.js --bundle --minify --outdir=dist"
+    },
+    "dependencies": {
+        "esbuild": "^0.25.10"
+    }
+}
